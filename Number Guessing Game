@@ -3,30 +3,32 @@
 using namespace std;
 int main(){
     int a;
-    int temp;
     int b = rand() % 10 + 1;
     cout<< "Welcome to Guess the Number Game" << endl;
     cout<< "We have selected a random number between 1 to 10" << endl << "See if you can guess it" << endl << "You will be getting only five chances" << endl;
     cout<< "enter a guess : ";
     cin>>a;
+    int count = 5;
     for(int i =0; i<4; i++){
     while(a!=b){
         if(a == 2+b  || a == 1+b ){
             cout<< "you are very close, guess a smaller number"<< "\n";
+            cout<< "chances left : " << --count << endl;
             cin>>a;
             break;
         }
         else if(a == b-2 || a == b-1){
             cout<< "you are very close, guess a bigger number"<< "\n";
+            cout<< "chances left : " << --count << endl;
             cin>>a;
             break;
         }
         else{
             cout<< "you are very far, try to guess a number closer"<< "\n";
+            cout<< "chances left : " << --count  << endl;
             cin>>a;
             break;
         }
-        temp = a;
     }
     }
     if(a == b){
