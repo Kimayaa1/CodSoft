@@ -5,9 +5,8 @@ int main(){
     int a;
     int temp;
     int b = rand() % 10 + 1;
-    cout<<b << endl;
-    cout<< "Guess the number" << endl;
-    cout<< "We have selected a random number between 1 to 10." << endl << "See if you can guess it." << endl << "You will be getting only five chances" << endl;
+    cout<< "Welcome to Guess the Number Game" << endl;
+    cout<< "We have selected a random number between 1 to 10" << endl << "See if you can guess it" << endl << "You will be getting only five chances" << endl;
     cout<< "enter a guess : ";
     cin>>a;
     for(int i =0; i<4; i++){
