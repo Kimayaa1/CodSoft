@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+
+int add(int a, int b) {
+    int result = a + b;
+    return result;
+}
+
+int sub(int a, int b) {
+    int result = a - b;
+    return result;
+}
+
+int mul(int a, int b) {
+    int result = a * b;
+    return result;
+}
+
+int divide(int a, int b) {
+    int result = a / b;
+    return result;
+}
+
+int main() {
+    int a;
+    int b;
+    char op;
+    int result = 0;
+    cout << "This is a simple Calculator" << endl;
+    cout << "Insert first number: " << endl;
+    cin >> a;
+    cout << "Enter the Operator (+,-,*,/): " << endl;
+    cin >> op;
+    cout << "Insert second number: " << endl;
+    cin >> b;
+
+    switch(op){
+        case '+':
+            result = add(a, b); 
+            break;
+
+        case '-':
+            result = sub(a, b);
+            break;
+
+        case '*':
+            result = mul(a, b);
+            break;
+
+        case '/':
+            result = divide(a, b);
+            break;
+
+        default :
+            cout << "Given operator does not exist for this calculator" << endl;      
+    }
+
+    cout << "Result of the given operation is: " << result << endl;
+}
